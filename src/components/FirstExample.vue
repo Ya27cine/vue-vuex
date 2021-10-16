@@ -14,7 +14,7 @@ export default {
     },
     methods: {
         inc(){
-            this.$store.state.count++;
+            this.$store.commit('inc')
         }
     },
 }
