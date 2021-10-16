@@ -6,8 +6,8 @@ export default createStore({
     name: 'Yassine'
   },
   mutations: {
-    inc(state){
-      state.count *= 7;
+    inc(state, payload){
+      state.count *= payload;
     }
   },
   actions: {

@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     inc(){
-      this.$store.commit('inc')
+      this.$store.commit('inc', 10)
     }
   },
   
