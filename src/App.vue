@@ -4,15 +4,28 @@
     <router-link to="/about">About</router-link>
   </div>
   <FirstExample />
+  <SecoundExample />
+  <button @click="inc" >App</button>
+
+
+
 </template>
 
 <script>
 import FirstExample from './components/FirstExample';
+import SecoundExample from './components/SecoundExample';
+
 
 export default {
   components: {
     FirstExample,
-  }
+    SecoundExample,
+  },
+  methods: {
+    inc(){
+            this.$store.state.count++;
+    }
+  },
   
 }
 </script>

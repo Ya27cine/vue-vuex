@@ -2,7 +2,7 @@
     <div>
         <h1>Vue vueX</h1>
         <h5>{{ counter }}</h5>
-        <button @click="inc">First Compo</button>
+        <button @click="inc">Secound Compo</button>
     </div>
 </template>
 <script>
