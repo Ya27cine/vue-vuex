@@ -10,6 +10,19 @@ export default createStore({
       state.count *= payload;
     }
   },
+  getters: {
+    getCounter(state){
+      return state.count * 2;
+    },
+    getCounterNormalise(_, getters){
+      const count =  getters.getCounter;
+
+      if( count < 0   ) return 0;
+      if( count > 100 ) return 100;
+
+      return count;
+    }
+  },
   actions: {
   },
   modules: {
