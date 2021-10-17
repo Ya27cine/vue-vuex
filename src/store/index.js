@@ -24,8 +24,9 @@ export default createStore({
     },
   },
   actions: {
-    actionIncCounter(context, payload){
-      context.commit('inc', payload)
+    actionIncCounter({ commit }, payload){
+      // console.log(context)
+      commit('inc', payload)
     }
   },
   modules: {
