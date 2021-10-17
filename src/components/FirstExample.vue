@@ -14,7 +14,7 @@ export default {
     },
     methods: {
         inc(){
-            this.$store.commit('inc',3)
+            this.$store.dispatch('actionIncCounter',3)
         }
     },
 }

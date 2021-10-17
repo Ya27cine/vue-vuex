@@ -15,15 +15,18 @@ export default createStore({
       return state.count * 2;
     },
     getCounterNormalise(_, getters){
-      const count =  getters.getCounter;
+      const counter =  getters.getCounter;
 
-      if( count < 0   ) return 0;
-      if( count > 100 ) return 100;
+      if( counter < 0   ) return 0;
+      if( counter > 100 ) return 100;
 
-      return count;
-    }
+      return counter;
+    },
   },
   actions: {
+    actionIncCounter(context, payload){
+      context.commit('inc', payload)
+    }
   },
   modules: {
   }
