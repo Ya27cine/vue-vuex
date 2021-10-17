@@ -1,6 +1,9 @@
 import { createStore } from 'vuex'
 
-export default createStore({
+
+
+//=================================== Module Counter 
+const counterModule = {
   state: {
     count: 7,
     name: 'Yassine'
@@ -19,10 +22,8 @@ export default createStore({
     },
     getCounterNormalise(_, getters){
       const counter =  getters.getCounter;
-
       if( counter < 0   ) return 0;
       if( counter > 100 ) return 100;
-
       return counter;
     },
   },
@@ -31,7 +32,46 @@ export default createStore({
       // console.log(context)
       commit('inc', payload)
     }
+  }
+}
+//================================================ end block Counter 
+
+
+
+
+//=================================== Module Category 
+const categoryModule = {
+  state: {
+    categories: []
+  },
+  mutations: {
+    addCategory(category){},
+    updateCategory(id, category){},
+    deleteCategory(id){}
+
+  },
+  getters: {
+    getCategories(state){}
+  },
+  actions: {
+    persistCategory({ commit }, payload){}
+  }
+}
+//================================================ end block Category 
+
+
+
+export default createStore({
+  state: {
+  },
+  mutations: {
+  },
+  getters: {
+  },
+  actions: {
   },
   modules: {
+    counterModule,
+    categoryModule
   }
 })
