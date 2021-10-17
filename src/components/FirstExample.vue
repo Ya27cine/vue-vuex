@@ -13,7 +13,7 @@ export default {
         //counter(){
          //   return this.$store.getters.getCounterNormalise
         //}
-        ...mapGetters({
+        ...mapGetters('counter',{
             'counter' : 'getCounterNormalise',
             'name': 'getName'
         })
@@ -22,7 +22,7 @@ export default {
        // inc(){
         //    this.$store.dispatch('actionIncCounter',3)
         //}
-        ...mapActions({
+        ...mapActions('counter',{
             'inc': 'actionIncCounter'
         })
     },

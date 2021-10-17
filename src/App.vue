@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     inc(){
-      this.$store.dispatch('actionIncCounter', 10)
+      this.$store.dispatch('counter/actionIncCounter', 10)
     }
   },
   

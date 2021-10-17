@@ -9,12 +9,12 @@
 export default {
     computed: {
         counter(){
-            return this.$store.getters.getCounter
+            return this.$store.getters['counter/getCounter']
         }
     },
     methods: {
         inc(){
-            this.$store.dispatch('actionIncCounter',2)
+            this.$store.dispatch('counter/actionIncCounter',2)
         }
     },
 }
